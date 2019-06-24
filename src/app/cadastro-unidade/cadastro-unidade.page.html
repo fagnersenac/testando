@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="center">
+    <ion-title>Cadastro de Unidades</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<div class="spsp"></div>
+<ion-content>
+  <form [formGroup]="formGroup" (ngSubmit)="cadastrar()">
+    <ion-list>
+     <ion-item>
+        <ion-label class="cl">Nome da Unidade:</ion-label>
+        <ion-input formControlName="nomeuni" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="cl">CNPJ:</ion-label>
+        <ion-input formControlName="cnpj" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="cl">Endereço:</ion-label>
+        <ion-input formControlName="endereco" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="cl">Cidade:</ion-label>
+        <ion-input formControlName="cidade" type="text"></ion-input> <ion-label class="cl">(UF):</ion-label>
+        <ion-input formControlName="uf" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="cl">Bairro:</ion-label>
+        <ion-input formControlName="bairro" type="text"></ion-input> <ion-label class="cl">Nº:</ion-label>
+        <ion-input formControlName="numero" type="text"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label class="cl">Tel 1:</ion-label>
+        <ion-input formControlName="telefone1" type="text"></ion-input> <ion-label class="cl">Tel 2:</ion-label>
+        <ion-input formControlName="telefone2" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="cl">E-mail:</ion-label>
+        <ion-input formControlName="email" type="text"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <div class="mg-top-30 padding-40">
+    <ion-button expand="full" type="submit" fill="outline" color="dark" (click)="cadastrar()">Cadastrar</ion-button>
+    </div>
+
+
+  </form>
+
+</ion-content>
